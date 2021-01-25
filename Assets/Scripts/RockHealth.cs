@@ -5,6 +5,7 @@ using UnityEngine;
 public class RockHealth : Health, IDamageAble<int>
 {
     public SpriteRenderer spriteRenderer;
+    
 
     public override void TakeDamage(int damage)
     {
@@ -22,10 +23,11 @@ public class RockHealth : Health, IDamageAble<int>
     {
         base.onDeath();
         Destroy(gameObject);
+       
     }
 
     protected override void HitFeedback()
     {
-        base.HitFeedback();
+        base.HitFeedback();        
     }
 }
